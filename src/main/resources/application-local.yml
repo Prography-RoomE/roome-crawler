@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: RoomE-Crawler-Application
+
+  main:
+    web-application-type: none
+
+  h2:
+    console:
+      enabled: false
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/roome
+    username: root
+    password: root
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_batch_fetch_size: 100
+
+logging:
+  file:
+    name: log.log
+    max-size: 100MB
